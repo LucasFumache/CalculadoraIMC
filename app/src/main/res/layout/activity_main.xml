@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D5D1F8"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/lblClasse"
+        android:layout_width="206dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@+id/lblResultado"
+        app:layout_constraintTop_toBottomOf="@+id/lblResultado" />
+
+    <TextView
+        android:id="@+id/lblTItulo"
+        android:layout_width="345dp"
+        android:layout_height="88dp"
+        android:text="CALCULADORA DE IMC"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.108" />
+
+    <TextView
+        android:id="@+id/lblPeso"
+        android:layout_width="100dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:text="Peso:"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/lblTItulo"
+        app:layout_constraintTop_toBottomOf="@+id/lblTItulo" />
+
+    <EditText
+        android:id="@+id/peso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:inputType="number|numberDecimal"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/lblPeso"
+        app:layout_constraintTop_toBottomOf="@+id/lblPeso" />
+
+    <TextView
+        android:id="@+id/altura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Altura:"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/peso"
+        app:layout_constraintTop_toBottomOf="@+id/peso" />
+
+    <EditText
+        android:id="@+id/lblAltura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:ems="10"
+        android:inputType="number|numberDecimal"
+        app:layout_constraintStart_toStartOf="@+id/altura"
+        app:layout_constraintTop_toBottomOf="@+id/altura" />
+
+    <TextView
+        android:id="@+id/lblIMC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="IMC:"
+        android:textColor="#000000"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/lblAltura"
+        app:layout_constraintTop_toBottomOf="@+id/lblAltura" />
+
+    <Button
+        android:id="@+id/btncalcular"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="161dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#352870"
+        android:backgroundTintMode="src_in"
+        android:text="Calcular"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/lblClasse"
+        app:layout_constraintTop_toBottomOf="@+id/lblClasse" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="391dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="442dp"
+        android:layout_height="55dp"
+        android:background="#352870"
+        tools:layout_editor_absoluteX="-22dp"
+        tools:layout_editor_absoluteY="-18dp" />
+
+    <TextView
+        android:id="@+id/lblResultado"
+        android:layout_width="201dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="68dp"
+        app:layout_constraintStart_toStartOf="@+id/lblAltura"
+        app:layout_constraintTop_toBottomOf="@+id/lblAltura" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="48dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="172dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.845"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/imc" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="71dp"
+        android:layout_height="59dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.835"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.363"
+        app:srcCompat="@drawable/altura" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="61dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="92dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.84"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.026"
+        app:srcCompat="@drawable/balance" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
